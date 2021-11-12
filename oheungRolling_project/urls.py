@@ -25,5 +25,7 @@ urlpatterns = [
     # path('admin/', admin.site.urls),
     path('postit/', views.postit, name = "postit"),
     path('form/', views.form_rolling, name = "form"),
-    path('form/code/', views.code_rolling, name ="code"),
+    path('add_post/', views.add_post, name ="add_post"),
+    path('random_code/', views.generate_random_code, name = "random_code"),
+    path('create', views.create, name = "create"),
 ]
