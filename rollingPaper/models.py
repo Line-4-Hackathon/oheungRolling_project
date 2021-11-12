@@ -9,4 +9,4 @@ class RollingInfo(models.Model) :
 class Comment(models.Model) :
 	writer = models.CharField(max_length=5)
 	description = models.TextField()
-	password = models.IntegerField()
+	password = models.IntegerField() # 4자리

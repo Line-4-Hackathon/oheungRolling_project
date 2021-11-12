@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+</head>
+<body class = "bg-lightyellow">
+    <nav class="navbar navbar-light bg-yellow justify-content-between">
+        <a class="navbar-brand">오흥롤링</a>
+        <form class="form-inline">
+          <button class="btn icon-yellow my-2 my-sm-0 d-flex justify-content-center" type="submit">
+            <span class="material-icons md-light">edit</span>
+          </button>
+        </form>
+      </nav>
+      <div class = "d-flex justify-content-center row">
+        {% for comment in comments %}
+        <div class = "post-card col-4 align-middle text-center mx-1 my-3">
+            <!-- views.py 에서 보낸 object 안에 담긴 cloumn  -->
+            <div>
+                <p>{{comment.writer}}</p>
+                <p>{{comment.description}}</p>
+            </div>
+        </div>
+        {% endfor %}
+      </div>
+      
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<style>
+.bg-yellow{
+    background-color:rgb(255, 255, 173);
+}
+.bg-lightyellow{
+    background-color: rgb(255,255,237);
+}
+.icon-yellow{
+    background-color: rgb(255,229,0);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+.post-card{
+    background-color: rgb(183, 196, 218);
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.212);
+}
+</style>
