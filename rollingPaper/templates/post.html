@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 웹사이트_navbar</title>
+
+    <!--FontAwesome-->
+    <script src="https://kit.fontawesome.com/63898db18f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
+    <style>
+        body{
+            margin: 0;
+            background-color: #FFFFED;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+
+        /*네브바*/
+        .navbar{
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+            background-color: #FFFFAD;
+            padding: 20px;
+            
+        }
+        .navbar__title{
+            font-weight: bolder;
+            font-size: 20px
+        }
+
+
+        /*색상버튼*/
+        button {
+            background-color: #04AA6D;
+            border: none;
+            padding: 20px;
+            display: inline-block;
+            margin: 4px 2px;
+            border-radius: 100%;
+        }
+        .color-btns{
+            margin-top: 40px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+
+        }
+        .color-btns span{
+            margin-right: 10px;
+            font-weight: bolder;
+            font-size: 25px
+        }
+
+        #color1_btn{
+            background-color: #FF6868;
+        }
+        
+        #color2_btn{
+            background-color: #FFCC48;
+        }
+        #color3_btn{
+            background-color: #DAFF70;
+        }
+        #color4_btn{
+            background-color: #A5AEFF;
+        }
+        #color5_btn{
+            background-color: #FC7CFF;
+        }
+
+
+        /*메모장*/
+        .post-it{
+            padding: 20px;
+            margin-bottom: 40px;
+        }
+        .textareaColor{
+            background-color:rgb(198, 238, 255);
+            border-color: white;
+        }
+        .container{
+	        display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /*제출버튼*/
+        .submit_btn{
+            width: 200px;
+            height: 50px;
+            border-style: none;
+            border-radius: 30px;
+            background-color: #FFE600;
+            color: white;
+            font-weight: bolder;
+            font-size: 23px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+    </style>
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__title">
+            <a href="#">포스트잇 작성하기</a>
+        </div>
+    </nav>
+
+    <section class="container">
+        <!--색상-->
+        <div class="color-btns">
+            <span>색상?</span>
+            <button id="color1_btn" onclick="document.querySelector('textarea').style.backgroundColor='#FF6868'"></button>
+            <button id="color2_btn" onclick="document.querySelector('textarea').style.backgroundColor='#FFCC48'"></button>
+            <button id="color3_btn" onclick="document.querySelector('textarea').style.backgroundColor='#DAFF70'"></button>
+            <button id="color4_btn" onclick="document.querySelector('textarea').style.backgroundColor='#A5AEFF'"></button>
+            <button id="color5_btn" onclick="document.querySelector('textarea').style.backgroundColor='#FC7CFF'"></button>
+        </div>
+
+
+        <!--메모장-->
+        <form action="">
+            <div>
+                <textarea class="post-it textareaColor" name="story" rows="15" cols="33">내용</textarea>
+            </div>
+    
+            <div class="container">
+                <input class="submit_btn" type= "submit" value="작성완료">
+            </div>
+        </form>
+    </section>
+
+
+</body>
+</html>
