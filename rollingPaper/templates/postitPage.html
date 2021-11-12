@@ -22,7 +22,7 @@
       </nav>
       <div class = "d-flex justify-content-center row">
         {% for comment in comments %}
-        <div class="draggable" class = "ui-widget-content post-card col-4 align-middle text-center mx-1 my-3">
+        <div class = "draggable ui-widget-content post-card col-4 align-middle text-center mx-1 my-3">
             <!-- views.py 에서 보낸 object 안에 담긴 cloumn  -->
             <div>
                 <p class = "mt-5 name-text">{{comment.writer}}</p>
@@ -70,5 +70,5 @@
     color: gray;
 }
 
-.draggable { width: 150px; height: 150px; padding: 0.5em; }
+#draggable { width: 150px; height: 150px; padding: 0.5em; }
 </style>
