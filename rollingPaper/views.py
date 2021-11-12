@@ -3,7 +3,7 @@ from django.shortcuts import render
 from .models import Comment
 
 def main(request):
-    return render(request, 'rollingPaper_main.html')
+    return render(request, 'main.html')
 
 def postit(request):
     comments = Comment.objects.all() #Blog 테이블에 있는 오브젝트 모두를 불러오기.
