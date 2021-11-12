@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import RollingInfo
+from .models import Comment
 
-# Register your models here.
+admin.site.register(RollingInfo)
+admin.site.register(Comment)

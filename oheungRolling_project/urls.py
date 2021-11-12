@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-import rollingPaper.views
+from rollingPaper.views import postit
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',rollingPaper.views.home, name="home"),
+    path('postit/', postit, name = "postit"),
 ]
