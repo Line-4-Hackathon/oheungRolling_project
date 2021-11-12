@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from rollingPaper import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.main, name='main'),
+    path('detail/<str:id>', views.detail, name='detail'),
+    path("codeconfirm", views.codeconfirm, name='codeconfirm'),
 ]

@@ -1,0 +1,15 @@
+<div id="center" class="position-absolute top-50 start-50 translate-middle">
+    <span class = "text">입장코드를 입력해주세요.</span>
+    <br>
+    <form action = "{% url 'codeconfirm' %}" method = "POST">{% csrf_token %}
+        <p>
+            <input id="codeinput" type="text" placeholder = "코드 입력">
+            &nbsp;&nbsp;
+            <input class="okbtn" type="submit" value="OK">
+        </p>
+    </form>
+    <br>
+    
+    <a class="newbtn" href="#"><button id="new_button" type="button">NEW</button></a>
+    <a class="addbtn" href="#"><button id="add_button" type="button">ADD</button></a>
+</div>
