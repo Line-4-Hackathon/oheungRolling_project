@@ -1,8 +1,10 @@
+from django.http import request
 from django.shortcuts import redirect, render, get_object_or_404
 from django.contrib.auth import authenticate
 from django.contrib import messages
 import uuid
 import base64
+import codecs
 from .models import RollingInfo
 from .models import Comment
 from django.utils import timezone
@@ -20,9 +22,6 @@ def add_post(request):
 
 def form_rolling(request):
     return render(request, 'rollingPaper_form.html')
-
-def code_rolling(request):
-    return render(request, 'rollingPaper_code.html')
 
 # Create your views here.
 
@@ -68,27 +67,36 @@ def creat_rolling(request):
 
 
 #랜덤 코드를 생성해주는 함수 
-'''
-def random_code(length=6):
-    """
-    generates random code of given length
-    """
-    code = base64.urlsafe_b64encode(
-    	uuid.uuid4().bytes.encode("base64").rstrip()
-    ).decode()[:length]
-    
-    #rolling_detail = get_object_or_404(RollingInfo, pk=rolling_id)
-    return render(request, 'detail.html', {'code':code})'''
-'''
 
-#롤링페이퍼 아이디에 맞는 페이지를 보여준다.
-def detail(request, rolling_id):
-    rolling_detail = get_object_or_404(RollingInfo, pk=rolling_id)
-    return render(request, 'detail.html', {'rolling': rolling_detail})
+
+def generate_random_code(request):
+    # generates random code of given length
+    # code = base64.urlsafe_b64encode(
+    #     codecs.encode(uuid.uuid4().bytes, "base64").rstrip()
+    # ).decode()[:6]
+    return render(request, "rollingPaper_code.html")
+
+
+def create(request):
+    new_rollingPaper = RollingInfo()
+    new_rollingPaper.rolling_name = request.POST['papername']
+    new_rollingPaper.recipient_name = request.POST['personname']
+    random_code = base64.urlsafe_b64encode(
+        codecs.encode(uuid.uuid4().bytes, "base64").rstrip()
+    ).decode()[:6]
+    new_rollingPaper.code = random_code
+    new_rollingPaper.save()
+    return render(request, "rollingPaper_code.html", {'random_code':random_code})
+
+
+# #롤링페이퍼 아이디에 맞는 페이지를 보여준다.
+# def detail(request, rolling_id):
+#     rolling_detail = get_object_or_404(RollingInfo, pk=rolling_id)
+#     return render(request, 'detail.html', {'rolling': rolling_detail})
     
-'''
-#데드라인이 넘으면
-def deadline(request):
-    today = datetime.today().strftime("%Y%m%d")
-    today = int(today)
-    rollings = RollingInfo.objects.all()
+
+# #데드라인이 넘으면
+# def deadline(request):
+#     today = datetime.today().strftime("%Y%m%d")
+#     today = int(today)
+#     rollings = RollingInfo.objects.all()
