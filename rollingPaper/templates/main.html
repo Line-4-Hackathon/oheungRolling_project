@@ -28,7 +28,7 @@
       font-size: 45px;
       font-weight: bold;
   }
-  
+
   .text{
       margin-left:15px;
   }
@@ -41,7 +41,7 @@
       font-size : 25px;
   }
 
-  .okbtn{
+  #okbtn{
       width: 100px;
       height: 60px;
       background-color: #FFE600;
@@ -80,7 +80,7 @@
 <body>
 
 <div id="fullpage">
-	<div class="section active bg-lightyellow">
+	<!-- <div class="section active bg-lightyellow">
     <div id = "main_content">
       <span class = "welcome">반가워요 👋</span>
       <br><br>
@@ -93,16 +93,17 @@
       <br>
       <span class= "explain05">마음을 전해보아요 💗</span>
     </div>
-  </div>
+  </div> -->
 	<div class="section bg-yellow">
     <div id="center" class="position-absolute top-50 start-50 translate-middle">
-      <span class = "text px-3">입장코드를 입력해주세요.</span>
+      <span class = "text px-3">코드를 입력해주세요 👋</span>
       <br>
       <form action = "#" method = "POST" class = "pt-5">
           <p>
               <input id="codeinput" type="text" id="codenumber" placeholder = "   코드 입력">
               &nbsp;&nbsp;
-              <input class="okbtn" type="submit" value="OK">
+              <a class="okbtn" href="{% url 'postit' %}"><button id="okbtn" type="button">OK</button></a>
+              <!-- <input  class="okbtn" type="submit" value="OK" > -->
           </p>
       </form>
       <br>
