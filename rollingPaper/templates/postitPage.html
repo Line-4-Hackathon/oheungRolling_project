@@ -22,7 +22,7 @@
         <div class = "post-card col-4 align-middle text-center mx-1 my-3">
             <!-- views.py 에서 보낸 object 안에 담긴 cloumn  -->
             <div>
-                <p>{{comment.writer}}</p>
+                <p class = "mt-5 name-text">{{comment.writer}}</p>
                 <p>{{comment.description}}</p>
             </div>
         </div>
@@ -51,7 +51,10 @@
 .post-card{
     background-color: rgb(183, 196, 218);
     width: 200px;
-    height: 200px;
+    height: 250px;
     box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.212);
+}
+.name-text{
+    color: gray;
 }
 </style>
