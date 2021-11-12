@@ -22,5 +22,5 @@ urlpatterns = [
     path('', main, name = "main"),
     path('postit/', postit, name = "postit"),
     path('form/', form_rolling, name = "form"),
-    path('code/', code_rolling, name ="code"),
+    path('form/code/', code_rolling, name ="code"),
 ]
