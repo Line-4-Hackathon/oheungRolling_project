@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from rollingPaper.views import postit
+from rollingPaper.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', main, name = "main"),
     path('postit/', postit, name = "postit"),
+    path('form/', form_rolling, name = "form"),
+    path('code/', code_rolling, name ="code"),
 ]
