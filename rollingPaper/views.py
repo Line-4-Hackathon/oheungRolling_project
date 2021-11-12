@@ -15,4 +15,7 @@ def add_post(request):
 def form_rolling(request):
     return render(request, 'rollingPaper_form.html')
 
+def code_rolling(request):
+    return render(request, 'rollingPaper_code.html')
+
 
