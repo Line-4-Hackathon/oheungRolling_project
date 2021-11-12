@@ -8,7 +8,21 @@ from .models import Comment
 from django.utils import timezone
 from datetime import datetime, timedelta
 from django.utils.dateformat import DateFormat
+from .models import Comment
 
+
+def postit(request):
+    comments = Comment.objects.all() #Blog 테이블에 있는 오브젝트 모두를 불러오기.
+    return render(request, 'postitPage.html', {'comments':comments}) #home.html 과 함께 blogs를 보내준다.
+
+def add_post(request):
+    return render(request, 'post.html')
+
+def form_rolling(request):
+    return render(request, 'rollingPaper_form.html')
+
+def code_rolling(request):
+    return render(request, 'rollingPaper_code.html')
 
 # Create your views here.
 
@@ -45,12 +59,12 @@ def codeconfirm(request):
 
     return render(request, '/detail/'+str(my_roll.pk))
 '''
-
+'''
 #롤링페이퍼 만들어주는 함수
 def creat_rolling(request):
     form = CreateForm()
     if request.method == 'POST' :
-        form = CreateForm(request.POST, request.FILES)
+        form = CreateForm(request.POST, request.FILES)'''
 
 
 #랜덤 코드를 생성해주는 함수 
@@ -64,7 +78,7 @@ def random_code(length=6):
     ).decode()[:length]
     
     #rolling_detail = get_object_or_404(RollingInfo, pk=rolling_id)
-    return render(request, 'detail.html', {'code':code})
+    return render(request, 'detail.html', {'code':code})'''
 '''
 
 #롤링페이퍼 아이디에 맞는 페이지를 보여준다.
@@ -77,5 +91,4 @@ def detail(request, rolling_id):
 def deadline(request):
     today = datetime.today().strftime("%Y%m%d")
     today = int(today)
-    rollings = RollingInfo.objects.all()'''
-    
+    rollings = RollingInfo.objects.all()

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #FFFFED;
+        }
+
+        #red {
+            background-color: #FF6868;
+        }
+
+        #orange{
+            background-color: #FFCC48;
+        }
+
+        #yellow {
+            background-color: #DAFF70;
+        }
+
+        #blue {
+            background-color: #A5AEFF;
+        }
+
+        #purple {
+            background-color: #FC7CFF;
+        }
+
+        .text_center {   
+            text-align: center;
+        }
+
+        #form_table {
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        #form_table tr td input{
+            margin-top: 20px;
+            padding-left: 10px;
+        }
+
+        #form_table tr td b{
+            margin-right: 5px;
+        }
+
+        .colorSet {
+            margin-top: 20px;
+        }
+
+        .colorSet button{
+            border: none;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            width: 80px;
+            height: 80px;
+            border-radius: 100%;
+        }
+
+        .formstyle {
+            border-radius: 15px;
+            border-width: 2px;
+            height: 65px;
+            width: 500px;
+            margin-bottom: 15px;
+        }
+
+        #paperform b {
+            font-size: 20px;
+        }
+
+        #create_button{
+            background-color: #FFE600;
+            color: white;
+            border-width: 0px;
+            width: 200px;
+            height: 50px;
+            border-radius: 30px;
+            font-size: 25px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="position-absolute top-50 start-50 translate-middle text_center">
+        <form id="paperform">
+            <table id="form_table">
+                <tr>
+                    <h1>오흥롤링 form</h1>
+                </tr>
+                <tr>
+                    <td><b>롤페 이름? </b> </td>
+                    <td><input type="text" name="papername" class="formstyle" placeholder="오흥이의 롤링페이퍼"><br></td>
+                </tr>
+                <tr>
+                    <td><b>누구? </b> </td>
+                    <td><input type="text" name="personname" class="formstyle" placeholder="오흥이"><br></td>
+                </tr>
+
+                <tr>
+                    <td><b>기간? </b> </td>
+                    <td><input type="date" name="rollpaname" class="formstyle"><br></td>
+                </tr>
+                <tr>
+                    <td><b>색상? </b></td>
+                    <td>            
+                        <div class = "colorSet">
+                            <button id="red"></button>
+                            <button id="orange"></button>
+                            <button id="yellow"></button>
+                            <button id="blue"></button>
+                            <button id="purple"></button>
+                        </div><br>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <input id="create_button" type="submit" value="롤페 생성" onclick="modifyMypage()">
+        </form>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script>
+        check = "";
+        function modifyMypage(){
+            window.open("code","코드 팝업","width=400, height=300, top=100, left=100");
+        }
+    </script>
+
+</body>
+
+</html>
