@@ -20,9 +20,9 @@ from rollingPaper import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.main, name='main'),
-    path('detail/<str:id>', views.detail, name='detail'),
-    path("codeconfirm", views.codeconfirm, name='codeconfirm'),
-    path('admin/', admin.site.urls),
+    # path('detail/<str:id>', views.detail, name='detail'),
+    # path("codeconfirm", views.codeconfirm, name='codeconfirm'),
+    # path('admin/', admin.site.urls),
     path('postit/', views.postit, name = "postit"),
     path('form/', views.form_rolling, name = "form"),
     path('form/code/', views.code_rolling, name ="code"),
