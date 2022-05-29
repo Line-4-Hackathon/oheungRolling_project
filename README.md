@@ -31,3 +31,6 @@
 - 롤링페이퍼(포스트잇) 작성
 
 ### [오흥-Figma](https://www.figma.com/file/c26ZmZPzHXsRQJgcC8444v/4%ED%98%B8%EC%84%A0-%ED%95%B4%EC%BB%A4%ED%86%A4?node-id=0%3A1)
+
+![image](https://user-images.githubusercontent.com/81175849/170854549-32888042-9562-4b47-a99c-a2c299973ea0.png)
+
